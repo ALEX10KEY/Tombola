@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="it.polito.tdp.tombola.TombolaController">
+   <top>
+      <Label text="Tombola" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnNuovaPartita" mnemonicParsing="false" onAction="#doNuovaPartita" text="Nuova partita">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <VBox>
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="Numero estratto: " />
+                        <TextField fx:id="txtNumeroEstratto" editable="false" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <Button fx:id="btnEstrai" mnemonicParsing="false" onAction="#doEstraiNuovoNumero" text="Estrai nuovo numero">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </VBox>
+            <Label text="Ultimi 5 numeri estratti" />
+            <TextField fx:id="txtUltimiNumeri" editable="false" />
+            <Button fx:id="btnTerminaPartita" mnemonicParsing="false" onAction="#doTerminaPartita" text="Termina partita">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
